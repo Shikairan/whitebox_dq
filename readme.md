@@ -30,9 +30,16 @@ pytest -v -s tests/test_memory_usage.py -m "memray and distributed" -k "test_mem
 pytest -v -s tests/test_memory_usage.py -m "memray and distributed" -k "test_memray_profiling_communication_all_scales"
 
 注意事项
+
 需要 CUDA：所有 -m cuda 或 GPU 相关测试需要 CUDA 环境
+
 需要多 GPU：所有 -m distributed 测试需要至少 2 张 GPU
+
 需要 memray：所有 -m memray 测试需要安装 memray（pip install memray）
+
 查看输出：使用 -s 参数可以看到 print 输出和内存监控信息
+
 测试规模：规模化测试默认 4-32 qubits，可在文件开头修改 SCALED_TEST_* 配置
+
 通信测试规模：默认 4-16 qubits（步长 2），可在文件开头修改 COMM_TEST_* 配置
+
