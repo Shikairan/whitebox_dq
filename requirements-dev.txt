@@ -1,0 +1,4 @@
+pytest
+graphix==0.3.1
+pytest-html
+memray
